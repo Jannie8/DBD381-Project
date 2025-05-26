@@ -19,10 +19,10 @@ node app.js
 
 **Test these in Postman**
 
-GET /api/products
-GET /api/products/:id
-POST /api/products
-PUT /api/products/:id
-DELETE /api/products/:id
+1. GET /api/products
+2. GET /api/products/:id
+3. POST /api/products
+4. PUT /api/products/:id
+5. DELETE /api/products/:id
 
 Similar routes exist for /api/orders, /api/users, /api/reviews, and /api/inventory.
