@@ -18,7 +18,7 @@ npm install
 
 Similar routes exist for /api/orders, /api/users, /api/reviews, and /api/inventory.
 
-**Run MongoDB with Docker //using bash terminal**
+**Run MongoDB with Docker (Open Docker Desktop in the background)//using bash terminal**
 
 -if this is your fist time running MongoDB:
 1. docker run -d -p 27017:27017 --name ecommerce-mongo mongo
@@ -27,6 +27,10 @@ Similar routes exist for /api/orders, /api/users, /api/reviews, and /api/invento
 1. docker start ecommerce-mongo
 2. docker ps
 3. docker exec -it ecommerce-mongo mongosh
+3. rs.initiate({
+  _id: "rs0",
+  members: [{ _id: 0, host: "mongo:27017" }]
+})
 
 -then: 
 1. rs.initiate() //if replication is not enabled, if it is proceed with next step 
@@ -35,9 +39,3 @@ Similar routes exist for /api/orders, /api/users, /api/reviews, and /api/invento
 Run the Node.js app:
 1. node app.js
 
-**Run MongoDB with Docker //using Powershell terminal**
-1. docker compose up -d
-2. docker ps
-3. docker exec -it ecommerce-mongo mongosh
-4. rs.initialize() 
-5. rs.status()
