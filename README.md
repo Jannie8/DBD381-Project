@@ -26,7 +26,7 @@ Similar routes exist for /api/orders, /api/users, /api/reviews, and /api/invento
 
 1. docker compose up –d 
 2. docker ps 
-3. docker exec –it mongo-replica mongosh 
+3. docker exec –it ecommerce-mongo mongosh 
 4. rs.initialize() 
 5. rs.status() 
 
