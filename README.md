@@ -19,16 +19,18 @@ npm install
 Similar routes exist for /api/orders, /api/users, /api/reviews, and /api/inventory.
 
 **Run MongoDB with Docker //using bash terminal**
+
 -if this is your fist time running MongoDB:
 1. docker run -d -p 27017:27017 --name ecommerce-mongo mongo
 
 -If you've created the container before:
 1. docker start ecommerce-mongo
-
--then:
 2. docker ps
-3. rs.initialize() 
-4. rs.status()
+3. docker exec -it ecommerce-mongo mongosh
+
+-then: 
+1. rs.initiate() //if replication is not enabled, if it is proceed with next step 
+2. rs.status()
 
 Run the Node.js app:
 1. node app.js
